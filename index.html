@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L3gend's LinkHub</title>
+    <link rel="stylesheet" href="assets/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body>
+    <div class="w-full max-w-md mx-auto p-8 container">
+        <header class="text-center">
+            <img src="assets/images/logo.png" alt="Logo"
+                class="w-24 h-24 md:w-28 md:h-28 rounded-full ring-4 ring-blue-400/50 shadow-lg mx-auto">
+
+            <h1 class="text-3xl font-bold mt-6 name">L3gend</h1>
+
+            <p class="text-lg text-gray-300 mt-1">@sl3gend</p>
+            <p class="text-sm text-gray-400 mt-3 max-w-xs mx-auto">Java Developer</p>
+        </header>
+
+        <nav class="flex-col space-y-4 mt-8">
+            <a href="https://github.com/L3gendYTs" target="_blank"
+                class="button w-full py-4 px-6 text-lg font-semibold flex items-center justify-center transition-all duration-300">GitHub</a>
+            <a href="https://discord.com/users/550373156120952852" target="_blank"
+                class="button w-full py-4 px-6 text-lg font-semibold flex items-center justify-center transition-all duration-300">Discord</a>
+            <a href="https://t.me/sl3gend" target="_blank"
+                class="button w-full py-4 px-6 text-lg font-semibold flex items-center justify-center transition-all duration-300">Telegram</a>
+            <a href="https://www.youtube.com/@sL3gend" target="_blank"
+                class="button w-full py-4 px-6 text-lg font-semibold flex items-center justify-center transition-all duration-300">Youtube</a>
+        </nav>
+
+        <footer class="mt-2 text-center">
+            <div class="mt-8 text-xs text-gray-500 flex justify-center items-center space-x-4">
+                <p class="hover:text-gray-300 transition-colors">Made with ❤️ by L3gend | © 2025 L3gend</p>
+                <a href="#" data-modal-open="privacy-modal" class="hover:text-gray-300 transition-colors">Privacy
+                    Policy</a>
+                <span class="text-gray-600">&bull;</span>
+                <a href="#" id="manage-cookies" data-modal-open="cookie-modal"
+                    class="hover:text-gray-300 transition-colors cursor-pointer">Cookie Policy</a>
+            </div>
+        </footer>
+    </div>
+
+    <div id="cookie-banner"
+        class="fixed bottom-0 left-0 right-0 w-full p-6 glass-card !rounded-t-lg !rounded-b-none z-50 hidden"
+        style="background: rgba(20, 25, 35, 0.5); /* Sfondo più scuro per leggibilità */">
+
+        <div class="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+            <p class="text-sm text-gray-200 text-center md:text-left">
+                Questo sito utilizza cookie tecnici per garantire il funzionamento. Cliccando "Accetta", acconsenti al
+                loro utilizzo.
+            </p>
+            <button id="accept-cookies"
+                class="bg-blue-600 text-white px-6 py-2 rounded-lg font-medium hover:bg-blue-700 transition-colors duration-200 flex-shrink-0">
+                Accetta
+            </button>
+        </div>
+    </div>
+
+    <div id="privacy-modal"
+        class="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-6 hidden"
+        data-modal-overlay="privacy-modal">
+        <button data-modal-close="privacy-modal"
+                class="absolute top-4 right-4 text-gray-400 hover:text-white transition-colors">
+                <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+        <h2 class="text-2xl font-bold mb-4 glass-name">Privacy Policy</h2>
+            <div class="text-gray-300 space-y-4 text-sm">
+                <p>La presente Privacy Policy descrive come vengono raccolti e trattati i dati personali su questo sito web, ospitato su GitHub Pages.</p>
+                <h3 class="font-semibold text-lg pt-2">Titolare del Trattamento</h3>
+                <p>Email: <a href="mailto:mail.l3gend@gmail.com" class="text-blue-400 hover:underline">mail.l3gend@gmail.com</a>.</p>
+
+                <h3 class="font-semibold text-lg pt-2">Dati Raccolti</h3>
+                <p><strong>Dati Forniti Volontariamente:</strong><br>
+                Questo sito è un "hub di link" statico. Non raccoglie dati personali.</p>
+                
+                <p><strong>Dati di Navigazione (Raccolti da GitHub Pages):</strong><br>
+                Questo sito è ospitato su GitHub Pages. Come per la maggior parte dei server web, GitHub può raccogliere dati di log standard per motivi di sicurezza e analisi. Questi log possono includere il tuo indirizzo IP, il tipo di browser, le pagine visitate e l'orario di accesso. Questi dati sono trattati da GitHub secondo la loro <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:underline">Privacy Policy</a>.</p>
+
+                <h3 class="font-semibold text-lg pt-2">Finalità del Trattamento</h3>
+                <p>I dati di navigazione raccolti da GitHub sono utilizzati per garantire la sicurezza e il corretto funzionamento del servizio. I dati da te forniti volontariamente tramite link esterni saranno utilizzati esclusivamente per rispondere alle tue richieste.</p>
+                
+                <h3 class="font-semibold text-lg pt-2">Link Esterni</h3>
+                <p>Questo sito contiene link a siti web esterni (es. GitHub, Discord, Telegram). Cliccando su questi link, esci da questo sito. La presente Privacy Policy non copre il trattamento dei dati effettuato da tali siti terzi. Ti invitiamo a consultare le rispettive privacy policy.</p>
+
+                <h3 class="font-semibold text-lg pt-2">Modifiche alla Privacy Policy</h3>
+                <p>Il titolare si riserva il diritto di modificare la presente Privacy Policy in qualsiasi momento. Le modifiche saranno comunicate tramite avviso sul sito.</p>
+            </div>
+    </div>
+
+    <div id="cookie-modal"
+        class="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-6 hidden"
+        data-modal-overlay="cookie-modal">
+        <div class="glass-card max-w-2xl w-full p-8 rounded-lg relative max-h-[80vh] overflow-y-auto">
+            <button data-modal-close="cookie-modal"
+                class="absolute top-4 right-4 text-gray-400 hover:text-white transition-colors">
+                <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+            <h2 class="text-2xl font-bold mb-4 glass-name">Cookie Policy</h2>
+            <div class="text-gray-300 space-y-4">
+                <p>Questo sito utilizza cookie tecnici essenziali per il suo funzionamento. Non vengono utilizzati
+                    cookie di profilazione o di terze parti senza il tuo esplicito consenso.</p>
+                <h3 class="font-semibold text-lg pt-2">Cosa sono i Cookie Tecnici?</h3>
+                <p>I cookie tecnici sono quelli utilizzati al solo fine di "effettuare la trasmissione di una
+                    comunicazione su una rete di comunicazione elettronica, o nella misura strettamente necessaria al
+                    fornitore di un servizio della società dell'informazione esplicitamente richiesto dall'abbonato o
+                    dall'utente a erogare tale servizio".</p>
+                <h3 class="font-semibold text-lg pt-2">Gestione dei Cookie</h3>
+                <p>Puoi gestire le tue preferenze relative ai cookie direttamente dal banner di consenso. Cliccando
+                    "Accetta", acconsenti all'uso dei cookie tecnici.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/scripts/main.js"></script>
+</body>
+
+</html>
